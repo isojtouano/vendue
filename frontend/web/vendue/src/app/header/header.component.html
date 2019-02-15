@@ -4,16 +4,15 @@
   <!-- This fills the remaining space of the current row -->
   <span class="menu"></span>
   
-  <button mat-button [matMenuTriggerFor]="notifications"><span class='material-icons'>notifications</span></button>
-  <mat-menu #notifications="matMenu">
-    <p mat-menu-item>No new notifications</p>
-    <small mat-menu-item><a href='/'>View all notifications</a></small>
-  </mat-menu>
-  <button mat-button [matMenuTriggerFor]="menu"><span class='material-icons'>menu</span></button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Market</button>
-    <button mat-menu-item>History</button>
-    <button mat-menu-item>Profile</button>
-    <button mat-menu-item>Login</button>
-  </mat-menu>
+  <div id='mobileToolbar'>
+    <button mat-button [matMenuTriggerFor]="menu"><span class='material-icons'>menu</span></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Market</button>
+      <button mat-menu-item>Log In</button>
+    </mat-menu>
+  </div>
+  <div class="collapse navbar-collapse" id="webToolbar">
+    <button mat-button>Market</button>
+    <button mat-button>Log In</button>
+  </div>
 </mat-toolbar>
