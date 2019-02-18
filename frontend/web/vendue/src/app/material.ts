@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatListModule, MatCardModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatInputModule, MatMenuModule } from '@angular/material';
+import { MatGridListModule, MatListModule, MatCardModule, MatButtonModule, MatCheckboxModule, MatToolbarModule, MatInputModule, MatMenuModule } from '@angular/material';
 import { NgMatSearchBarModule } from 'ng-mat-search-bar';
 
 @NgModule({
@@ -10,7 +10,8 @@ import { NgMatSearchBarModule } from 'ng-mat-search-bar';
         NgMatSearchBarModule, 
         MatMenuModule,
         MatCardModule,
-        MatListModule
+        MatListModule,
+        MatGridListModule
     ],
     exports: [ MatButtonModule, 
         MatCheckboxModule, 
@@ -19,7 +20,8 @@ import { NgMatSearchBarModule } from 'ng-mat-search-bar';
         NgMatSearchBarModule, 
         MatMenuModule,
         MatCardModule,
-        MatListModule
+        MatListModule,
+        MatGridListModule
     ],
 })
 

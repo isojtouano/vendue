@@ -1,36 +1,58 @@
 <div class='container'>
     <div class='row'>
-        <br><br>
-        <div class='col-lg-6' id='homeMessage'>
-            <br><br>
-            <h2>BEST ONLINE AUCTION SITE</h2>
-            <h4>According to the devs</h4>
-        </div>
-        <div class='col-lg-6'>
-            <br><br><br>
-            <mat-card id='signupCard'>
-                <mat-card-title>Sign Up</mat-card-title>
-                <mat-card-subtitle>It is for free</mat-card-subtitle>
+        <br>
+        <div class='row'>
+            <div class='col-lg-6' id='homeMessage'>
+                <br><br>
+                <h2>BEST ONLINE AUCTION SITE</h2>
+                <h4>According to the devs</h4>
+            </div>
+            <div class='col-lg-6'>
+                <br>
+                <mat-card id='signupCard'>
+                    <mat-card-title>Sign Up</mat-card-title>
+                    <mat-card-subtitle>It is for free</mat-card-subtitle>
 
-                <mat-card>
-                    <h4>Fill up form</h4>
-                    <div class="example-container">
-                        <mat-form-field>
-                            <input type='text' matInput placeholder="Input username...">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input type='password' matInput placeholder="Input password...">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input type='email' matInput placeholder="Input email...">
-                        </mat-form-field>
-                        <button mat-raised-button color='accent'>Submit</button>
-                    </div>
+                    <mat-card>
+                        <h4>Fill up form</h4>
+                        <div class="example-container">
+                            <mat-form-field>
+                                <input type='text' matInput placeholder="Input username...">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input type='password' matInput placeholder="Input password...">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input type='email' matInput placeholder="Input email...">
+                            </mat-form-field>
+                            <button mat-raised-button color='accent'>Submit</button>
+                        </div>
+                    </mat-card>
                 </mat-card>
-            </mat-card>
+            </div> 
         </div>
-        <div class='col-lg-12' color='primary'>
-            
+        <div class='col-lg-12 section text-center' id='section1'>
+            <mat-grid-list id='itemGrid' cols="3" rowHeight="30vh" gutterSize="3vh">
+                <mat-grid-tile>
+                    <mat-card>
+                        <mat-card-title>Item #1</mat-card-title>
+                        <mat-card-subtitle>This item will be auctioned on DD/MM/YY</mat-card-subtitle>
+                    </mat-card>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-card>
+                        <mat-card-title>Item #2</mat-card-title>
+                        <mat-card-subtitle>This item will be auctioned on DD/MM/YY</mat-card-subtitle>
+                    </mat-card>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                        <mat-card>
+                            <mat-card-title>Item #3</mat-card-title>
+                            <mat-card-subtitle>This item will be auctioned on DD/MM/YY</mat-card-subtitle>
+                        </mat-card>
+                    </mat-grid-tile>
+            </mat-grid-list>
         </div>
     </div>
 </div>
+<div class='primaryColorBG' id='section1BG'></div>
