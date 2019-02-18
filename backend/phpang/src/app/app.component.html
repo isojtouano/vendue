@@ -1,0 +1,12 @@
+<div class= 'center'>
+    <p class="login">Login</p>
+<input type ="text" #username placeholder="Enter Username">
+<input type ="password" #password placeholder="Enter Password">
+<button (click)="getU(username, password)">Enter</button>
+<div *ngIf="post">
+    <p class="login">Name:{{post[0].username}}</p>
+    <p class="login">UserType: {{post[0].type}}</p>
+    <img src="/assets/img/{{post[0].img}}" class = 'omg'>
+</div>
+</div>
+<router-outlet></router-outlet>
