@@ -10,6 +10,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MarketComponent } from './market/market.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     FooterComponent,
     MarketComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { LoginComponent } from './login/login.component';
       { path:'', redirectTo: 'home', pathMatch: 'full' },
       { path:'home', component: HomeComponent },
       { path:'market', component: MarketComponent },
-      { path:'login', component: LoginComponent }
+      { path:'login', component: LoginComponent },
+      { path:'dashboard', component: DashboardComponent, canActivate: [ AuthenticationGuard ] }
     ])
   ],
   providers: [],

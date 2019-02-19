@@ -4,6 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthenticationService {
+  private userId: number;
 
   constructor() { }
+
+  loginUser(username:string, password:string) {
+
+  }
 }
