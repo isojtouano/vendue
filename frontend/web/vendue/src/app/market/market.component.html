@@ -1,3 +1,17 @@
-<div class='container'>
-  market works
+<div class='container-fluid'>
+  <div class='row'>
+    <br><br>
+    <div class='col-lg-10 col-lg-offset-1'>
+      <mat-card>
+        <mat-card-title>Live and Upcoming Auctions</mat-card-title>
+        <mat-card-content>
+          <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+            <mat-card *ngFor="let item of dummy">
+              <mat-card-title> {{ item.name }}</mat-card-title>
+            </mat-card>
+          </mat-paginator>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>

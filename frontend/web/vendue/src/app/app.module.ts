@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MarketComponent } from './market/market.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MarketComponent } from './market/market.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    MarketComponent
+    MarketComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { MarketComponent } from './market/market.component';
     RouterModule.forRoot([
       { path:'', redirectTo: 'home', pathMatch: 'full' },
       { path:'home', component: HomeComponent },
-      { path:'market', component: MarketComponent }
+      { path:'market', component: MarketComponent },
+      { path:'login', component: LoginComponent }
     ])
   ],
   providers: [],
