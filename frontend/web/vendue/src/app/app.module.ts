@@ -12,6 +12,7 @@ import { MarketComponent } from './market/market.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { BidComponent } from './bid/bid.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AuthenticationGuard } from './authentication.guard';
     FooterComponent,
     MarketComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    BidComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,9 @@ import { AuthenticationGuard } from './authentication.guard';
       { path:'home', component: HomeComponent },
       { path:'market', component: MarketComponent },
       { path:'login', component: LoginComponent },
-      { path:'dashboard', component: DashboardComponent, canActivate: [ AuthenticationGuard ] }
+      { path:'dashboard', component: DashboardComponent, canActivate: [ AuthenticationGuard ] },
+      { path:'bid', component: BidComponent, canActivate: [ AuthenticationGuard ] }
+
     ])
   ],
   providers: [],

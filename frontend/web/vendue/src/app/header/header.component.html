@@ -9,12 +9,12 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item routerLink='/'>Home</button>
       <button mat-menu-item routerLink='/market'>Market</button>
-      <button mat-menu-item routerLink='/login'>Log In</button>
+      <button mat-menu-item routerLink='/{{ stateMethod }}'>{{ state }}</button>
     </mat-menu>
   </div>
   <div class="collapse navbar-collapse" id="webToolbar">
     <button mat-button routerLink='/'>Home</button>
     <button mat-button routerLink='/market'>Market</button>
-    <button mat-button routerLink='/login'>Log In</button>
+    <button mat-button routerLink='/{{ stateMethod }}'>{{ state }}</button>
   </div>
 </mat-toolbar>
