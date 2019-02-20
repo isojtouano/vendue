@@ -1,6 +1,18 @@
 <div class='container-fluid'>
   <div class='row'>
-    <br><br>
+    <div class='col-lg-10 col-lg-offset-1 section text-center'>
+      <mat-card>
+        <img mat-card-img src='../../assets/img/person.png' id='profileImg'>
+        <mat-card-content>
+          <mat-card-title>
+            Doe, John
+          </mat-card-title>
+          <mat-card-content>
+            <p>Auction(s) won: 0</p><p>Item(s) sold: 0</p>
+          </mat-card-content>
+        </mat-card-content>
+      </mat-card>
+    </div>
     <div class='col-lg-10 col-lg-offset-1 section'>
       <mat-card>
         <mat-card-title>
@@ -12,6 +24,9 @@
         <mat-card-content>
           Nothing here
         </mat-card-content>
+        <mat-card-actions>
+          <button mat-button><span class='material-icons'>history</span></button>
+        </mat-card-actions>
       </mat-card>
     </div>
     <br><br>
@@ -26,10 +41,30 @@
         <mat-card-content>
           Nothing here
         </mat-card-content>
+        <mat-card-actions>
+          <button mat-button><span class='material-icons'>history</span></button>
+          <button mat-button routerLink='/market'><span class='material-icons'>add_circle_outline</span></button>
+        </mat-card-actions>
       </mat-card>
     </div>
     <br><br>
     <div class='col-lg-10 col-lg-offset-1 section'>
+      <mat-card>
+        <mat-card-title>
+          Confirmations
+        </mat-card-title>
+        <mat-card-subtitle>
+          See all your item's highest bids here...
+        </mat-card-subtitle>
+        <mat-card-content>
+          Nothing here
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button><span class='material-icons'>history</span></button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+      <div class='col-lg-10 col-lg-offset-1 section'>
         <mat-card>
           <mat-card-title>
             Your items
@@ -40,6 +75,10 @@
           <mat-card-content>
             Nothing here
           </mat-card-content>
+          <mat-card-actions>
+            <button mat-button><span class='material-icons'>history</span></button>
+            <button mat-button><span class='material-icons'>add_circle_outline</span></button>
+          </mat-card-actions>
         </mat-card>
       </div>
   </div>

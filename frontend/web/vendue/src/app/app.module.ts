@@ -31,12 +31,12 @@ import { BidComponent } from './bid/bid.component';
     MaterialModule,
     RouterModule.forRoot([
       { path:'', redirectTo: 'home', pathMatch: 'full' },
+      { path:'logout', redirectTo: 'home', pathMatch: 'full' },
       { path:'home', component: HomeComponent },
       { path:'market', component: MarketComponent },
       { path:'login', component: LoginComponent },
       { path:'dashboard', component: DashboardComponent, canActivate: [ AuthenticationGuard ] },
       { path:'bid', component: BidComponent, canActivate: [ AuthenticationGuard ] }
-
     ])
   ],
   providers: [],

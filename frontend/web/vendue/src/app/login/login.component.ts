@@ -12,10 +12,11 @@ export class LoginComponent implements OnInit {
   constructor(private auth: AuthenticationService) { }
 
   getUserDetails(username:string, password:string) {
-    
+
   }
 
   ngOnInit() {
+    
   }
 
 }

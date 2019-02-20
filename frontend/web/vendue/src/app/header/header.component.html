@@ -7,14 +7,14 @@
   <div id='mobileToolbar'>
     <button mat-button [matMenuTriggerFor]="menu"><span class='material-icons'>menu</span></button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink='/'>Home</button>
+      <button mat-menu-item routerLink='/{{ homeUrl }}'>Home</button>
       <button mat-menu-item routerLink='/market'>Market</button>
-      <button mat-menu-item routerLink='/{{ stateMethod }}'>{{ state }}</button>
+      <button mat-menu-item routerLink='/{{ methodUrl }}'>{{ method }}</button>
     </mat-menu>
   </div>
   <div class="collapse navbar-collapse" id="webToolbar">
-    <button mat-button routerLink='/'>Home</button>
+    <button mat-button routerLink='/{{ homeUrl }}'>Home</button>
     <button mat-button routerLink='/market'>Market</button>
-    <button mat-button routerLink='/{{ stateMethod }}'>{{ state }}</button>
+    <button mat-button routerLink='/{{ methodUrl }}'>{{ method }}</button>
   </div>
 </mat-toolbar>
