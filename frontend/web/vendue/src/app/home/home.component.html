@@ -14,18 +14,20 @@
 
                     <mat-card>
                         <h4>Fill up form</h4>
-                        <div class="example-container">
-                            <mat-form-field>
-                                <input type='text' matInput placeholder="Input username">
-                            </mat-form-field>
-                            <mat-form-field>
-                                <input type='password' matInput placeholder="Input password">
-                            </mat-form-field>
-                            <mat-form-field>
-                                <input type='email' matInput placeholder="Input email">
-                            </mat-form-field>
-                            <button mat-raised-button color='accent'>Submit</button>
-                        </div>
+                        <form [formGroup]='signupForm' (ngSubmit)='signupUser()'>
+                            <div class="example-container">
+                                <mat-form-field>
+                                    <input type='text' name='username' matInput placeholder="Input username" [formControl]="signupForm.controls['username']" required>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <input type='password' name='password' matInput placeholder="Input password" [formControl]="signupForm.controls['password']" required>
+                                </mat-form-field>
+                                <mat-form-field>
+                                    <input type='email' name='email' matInput placeholder="Input email" [formControl]="signupForm.controls['email']" required>
+                                </mat-form-field>
+                                <button mat-raised-button color='accent'>Submit</button>
+                            </div>
+                        </form>
                     </mat-card>
                 </mat-card>
             </div> 

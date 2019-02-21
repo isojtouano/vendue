@@ -3,17 +3,19 @@
     <br><br>
     <div class='col-lg-6 col-lg-offset-3'>
       <mat-card>
-        <div class='example-container'>
-            <mat-card-title>Log In</mat-card-title>
-            <mat-form-field>
-              <input type='text' matInput placeholder='Username'>
-            </mat-form-field>
-            <mat-form-field>
-              <input type='password' matInput placeholder='Password'>
-            </mat-form-field>
-            <br>
-            <button mat-raised-button type='submit' color='accent' routerLink='/dashboard'>Log In</button>
-        </div>
+        <form [formGroup]='loginForm' (ngSubmit)='loginUser()'>
+          <div class='example-container'>
+              <mat-card-title>Log In</mat-card-title>
+              <mat-form-field>
+                <input type='text' matInput name='username' placeholder='Username' [formControl]="loginForm.controls['username']" required>
+              </mat-form-field>
+              <mat-form-field>
+                <input id='password' type='password' matInput name='password' placeholder='Password' [formControl]="loginForm.controls['password']" required>
+              </mat-form-field>
+              <br>
+              <button mat-raised-button type='submit' color='accent'>Log In</button>
+          </div>
+        </form>
       </mat-card>
     </div>
   </div>

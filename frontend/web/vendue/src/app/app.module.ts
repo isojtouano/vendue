@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material';
@@ -13,6 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { BidComponent } from './bid/bid.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthenticationService } from './authentication.service';
+import { MarketService } from './market.service';
 
 @NgModule({
   declarations: [
@@ -27,8 +31,11 @@ import { BidComponent } from './bid/bid.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
+    RouterModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path:'', redirectTo: 'home', pathMatch: 'full' },
       { path:'logout', redirectTo: 'home', pathMatch: 'full' },
@@ -39,7 +46,7 @@ import { BidComponent } from './bid/bid.component';
       { path:'bid', component: BidComponent, canActivate: [ AuthenticationGuard ] }
     ])
   ],
-  providers: [],
+  providers: [AuthenticationService, AuthenticationGuard, MarketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

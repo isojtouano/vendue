@@ -13,7 +13,7 @@ import { NgMatSearchBarModule } from 'ng-mat-search-bar';
         MatListModule,
         MatGridListModule,
         MatDialogModule,
-        MatPaginatorModule
+        MatPaginatorModule,
     ],
     exports: [ MatButtonModule, 
         MatCheckboxModule, 
@@ -25,7 +25,7 @@ import { NgMatSearchBarModule } from 'ng-mat-search-bar';
         MatListModule,
         MatGridListModule,
         MatDialogModule,
-        MatPaginatorModule
+        MatPaginatorModule,
     ],
 })
 
