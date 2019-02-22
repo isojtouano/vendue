@@ -4,7 +4,9 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 
 interface Data{
-  message: boolean
+  message: string
+  isError:boolean
+  accessToken:string
 }
 
 @Component({
@@ -27,8 +29,10 @@ export class LoginComponent implements OnInit {
 
     this.auth.loginUser(this.username, this.password).subscribe((data: Data) => {
       console.log(data);
-      if(data.message){
+      if(!data.isError){
         this.router.navigateByUrl('/dashboard');
+        this.auth.setLoggedIn('in');
+        console.log('AccessToken:',data.accessToken);
         console.log('Login success...');
       }else{
         console.log("Login error...");
@@ -41,10 +45,6 @@ export class LoginComponent implements OnInit {
       username: [ null, Validators.compose([]) ],
       password: [ null, Validators.compose([]) ]
     })
-  }
-
-  showPassword() {
-    // should show password
   }
 
 }

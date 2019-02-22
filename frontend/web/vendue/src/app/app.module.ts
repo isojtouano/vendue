@@ -17,6 +17,9 @@ import { BidComponent } from './bid/bid.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './authentication.service';
 import { MarketService } from './market.service';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ItemComponent } from './item/item.component';
+import { ItemService } from './item.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { MarketService } from './market.service';
     MarketComponent,
     LoginComponent,
     DashboardComponent,
-    BidComponent
+    BidComponent,
+    EditProfileComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +48,12 @@ import { MarketService } from './market.service';
       { path:'market', component: MarketComponent },
       { path:'login', component: LoginComponent },
       { path:'dashboard', component: DashboardComponent, canActivate: [ AuthenticationGuard ] },
-      { path:'bid', component: BidComponent, canActivate: [ AuthenticationGuard ] }
+      { path:'bid', component: BidComponent, canActivate: [ AuthenticationGuard ] },
+      { path:'editProfile', component: EditProfileComponent, canActivate: [ AuthenticationGuard ] },
+      { path:'item', component: ItemComponent, canActivate: [ AuthenticationGuard ] }
     ])
   ],
-  providers: [AuthenticationService, AuthenticationGuard, MarketService],
+  providers: [AuthenticationService, AuthenticationGuard, MarketService, ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

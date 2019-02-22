@@ -5,11 +5,16 @@
       <mat-card>
         <mat-card-title>Live and Upcoming Auctions</mat-card-title>
         <mat-card-content>
-          <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-            <mat-card *ngFor="let item of dummy">
-              <mat-card-title> {{ item.name }}</mat-card-title>
+          <!-- <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"> -->
+            <mat-card class='section' *ngFor='let item of items'>
+              <mat-card-title> {{item.item_name}} </mat-card-title>
+              <mat-card-content> <p>Category: {{item.item_category}} </p><p>Description: {{item.item_description}} </p></mat-card-content>
+              <mat-card-actions>
+                <h4> Reserve Price: {{item.item_price}} </h4>
+                <button mat-raised-button color='accent' routerLink='/bid'>Bid</button>
+              </mat-card-actions>
             </mat-card>
-          </mat-paginator>
+          <!-- </mat-paginator> -->
         </mat-card-content>
       </mat-card>
     </div>

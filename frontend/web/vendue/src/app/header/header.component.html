@@ -1,5 +1,5 @@
 <mat-toolbar color='primary'>
-  <a routerLink='/'><img id='logo' src='../../assets/img/vendue2.png'></a>
+  <a routerLink='/{{ homeUrl }}'><img id='logo' src='../../assets/img/vendue2.png'></a>
 
   <!-- This fills the remaining space of the current row -->
   <span class="menu"></span>
@@ -9,12 +9,14 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item routerLink='/{{ homeUrl }}'>Home</button>
       <button mat-menu-item routerLink='/market'>Market</button>
-      <button mat-menu-item routerLink='/{{ methodUrl }}'>{{ method }}</button>
+      <button mat-menu-item routerLink='/login' *ngIf='!state'>Log In</button>
+      <button mat-menu-item (click)='logout()' *ngIf='state'>Log Out</button>
     </mat-menu>
   </div>
   <div class="collapse navbar-collapse" id="webToolbar">
     <button mat-button routerLink='/{{ homeUrl }}'>Home</button>
     <button mat-button routerLink='/market'>Market</button>
-    <button mat-button routerLink='/{{ methodUrl }}'>{{ method }}</button>
+    <button mat-button routerLink='/login' *ngIf='!state'>Log In</button>
+    <button mat-button (click)='logout()' *ngIf='state'>Log Out</button>
   </div>
 </mat-toolbar>

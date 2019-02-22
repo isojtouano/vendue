@@ -1,0 +1,26 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-lg-8 col-lg-offset-2 section'>
+      <mat-card>
+        <form [formGroup]='addItemForm' (ngSubmit)='addItem()'>
+          <div class='example-container'>
+            <mat-card-title>Add Item</mat-card-title>
+            <mat-form-field>
+              <input type='text' name='name' matInput placeholder="Item name" [formControl]="addItemForm.controls['name']" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input type='text' name='description' matInput placeholder="Item description" [formControl]="addItemForm.controls['description']" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input type='text' name='category' matInput placeholder="Item category" [formControl]="addItemForm.controls['category']" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input type='tel' name='reserve' placeholder='0' matInput [formControl]="addItemForm.controls['reserve']" required>
+            </mat-form-field>
+            <button type='submit' color='accent' mat-raised-button>Add Item</button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

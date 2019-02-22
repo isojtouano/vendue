@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private auth: AuthenticationService) { }
 
   ngOnInit() {
+    this.auth.setLoggedOut("out");
     this.signupForm = this.formBuilder.group({
       username: [ null, Validators.compose([]) ],
       password: [ null, Validators.compose([]) ],

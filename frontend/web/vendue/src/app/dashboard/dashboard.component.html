@@ -5,10 +5,12 @@
         <img mat-card-img src='../../assets/img/person.png' id='profileImg'>
         <mat-card-content>
           <mat-card-title>
-            Doe, John
+            Doe, John <span class='material-icons' routerLink='/editProfile'>edit</span>
           </mat-card-title>
           <mat-card-content>
-            <p>Auction(s) won: 0</p><p>Item(s) sold: 0</p>
+            <p>Auctions won: 0</p>
+            <p>Items sold: 0</p>
+            <p>Total bids: 0</p>
           </mat-card-content>
         </mat-card-content>
       </mat-card>
@@ -77,7 +79,7 @@
           </mat-card-content>
           <mat-card-actions>
             <button mat-button><span class='material-icons'>history</span></button>
-            <button mat-button><span class='material-icons'>add_circle_outline</span></button>
+            <button mat-button routerLink='/item'><span class='material-icons'>add_circle_outline</span></button>
           </mat-card-actions>
         </mat-card>
       </div>

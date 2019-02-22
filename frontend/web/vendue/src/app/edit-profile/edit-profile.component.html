@@ -1,0 +1,22 @@
+<div class='container'>
+  <div class='row'>
+    <br><br>
+    <div class='col-lg-6 col-lg-offset-3'>
+      <mat-card>
+        <form [formGroup]='editProfileForm' (ngSubmit)='editUser()'>
+          <div class='example-container'>
+              <mat-card-title>Edit Profile</mat-card-title>
+              <mat-form-field>
+                <input type='text' matInput name='username' placeholder='John Doe' [formControl]="editProfileForm.controls['username']" required>
+              </mat-form-field>
+              <mat-form-field>
+                <input id='email' type='email' matInput name='email' placeholder='Email' [formControl]="editProfileForm.controls['email']" required>
+              </mat-form-field>
+              <br>
+              <button mat-raised-button type='submit' color='accent'>Submit</button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,10 @@ export class DashboardComponent implements OnInit {
   constructor(private auth: AuthenticationService) { }
 
   ngOnInit() {
-    this.auth.setLoggedIn();
+    this.auth.cast.subscribe((data) => {
+
+    });
+    //observe cast from service to obtain user data, user data will come from service
   }
 
 }
